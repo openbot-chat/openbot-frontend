@@ -22,10 +22,10 @@ The development server will start at `http://localhost:3000`
 
 ## Features
 - AI Agent Management
-- Real-time Agent Monitoring
-- Customizable Agent Behaviors
+- Customizable Agent Behaviors(Multi-modal)
 - Connect any Data Source
 - Connect any Tools
+- Connect to any channel
 
 ## Contributing
 Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
