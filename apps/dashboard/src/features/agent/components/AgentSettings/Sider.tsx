@@ -18,8 +18,8 @@ export function Sider({
     <VStack p='8' h='full'>
       <Avatar src={agent?.avatar} width="108" height="108" borderRadius={16} />
       <Heading size="sm">{agent?.name}</Heading>
-      <Text size="sm">全网粉丝: 20.1k</Text>
-      <Text size="12px">模型/版本: DeepSeek</Text>
+      <Text size="sm">Fans: 20.1k</Text>
+      <Text size="12px">Model: DeepSeek</Text>
 
       <VStack spacing='4'>
         <Button w='180px' colorScheme='twitter' leftIcon={<PlusIcon/>}>Twitter联系我</Button>
