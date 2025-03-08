@@ -17,11 +17,11 @@ const openaiSchema = {
     "model_name": {
       "title": "Model",
       "type": "string",
-      "default": "gpt-3.5-turbo-1106",
+      "default": "deepseek-chat",
       "oneOf": [
-        { "type": "string", "title": "gpt-3.5-turbo-0613", "enum": ["gpt-3.5-turbo-0613"] },
-        { "type": "string", "title": "gpt-3.5-turbo-1106", "enum": ["gpt-3.5-turbo-1106"] },
-        { "type": "string", "title": "GPT-4", "enum": ["gpt-4"] }
+        { "type": "string", "title": "GPT-4o", "enum": ["gpt-4o"] },
+        { "type": "string", "title": "GPT-O1-Preview", "enum": ["gpt-o1-preview"] },
+        { "type": "string", "title": "DeepSeek", "enum": ["deepseek-chat"] }
       ]
     },
     "temperature": {

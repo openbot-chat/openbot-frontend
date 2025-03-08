@@ -19,7 +19,7 @@ export function Sider({
       <Avatar src={agent?.avatar} width="108" height="108" borderRadius={16} />
       <Heading size="sm">{agent?.name}</Heading>
       <Text size="sm">全网粉丝: 20.1k</Text>
-      <Text size="12px">模型/版本: GPT-4</Text>
+      <Text size="12px">模型/版本: DeepSeek</Text>
 
       <VStack spacing='4'>
         <Button w='180px' colorScheme='twitter' leftIcon={<PlusIcon/>}>Twitter联系我</Button>

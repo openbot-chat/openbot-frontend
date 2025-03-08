@@ -69,12 +69,16 @@ export const CreateConversationModal: React.FC<CreateConversationModalProps> = (
 
   const models = useMemo(() => [
     {
-      value: "gpt-3.5",
-      label: "gpt-3.5",
+      value: "gpt-4o",
+      label: "GPT-4o",
     },
     {
-      value: "gpt-4",
-      label: "gpt-4",
+      value: "gpt-o1-preview",
+      label: "GPT-O1-Preview",
+    },
+    {
+      value: "deepseek-chat",
+      label: "DeepSeek",
     }
   ], []);
 
