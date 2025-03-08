@@ -13,8 +13,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     },
     url: 'https://slack.com/api/oauth.v2.access',
     params: {
-      client_id: '4598060091297.5277393611057',
-      client_secret: '064ebc6ccd4e48866e0042a00a86ab8c',
+      client_id: process.env.SLACK_CLIENT_ID,
+      client_secret: process.env.SLACK_CLIENT_SECRET,
       code: req.query.code,
       // redirect_uri: 'https://aiplugin123.loca.lt/api/oauth/callback/slack',
     }
