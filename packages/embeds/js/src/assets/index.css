@@ -1,0 +1,360 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:host {
+  --openbot-container-bg-image: none;
+  --openbot-container-bg-color: transparent;
+  --openbot-container-font-family: "Open Sans";
+  --openbot-container-color: #303235;
+
+  --openbot-button-bg-color: #0042da;
+  --openbot-button-bg-color-rgb: 0, 66, 218;
+  --openbot-button-color: #ffffff;
+
+  --openbot-checkbox-bg-color: #ffffff;
+
+  --openbot-host-bubble-bg-color: #f7f8ff;
+  --openbot-host-bubble-color: #303235;
+
+  --openbot-guest-bubble-bg-color: #ff8e21;
+  --openbot-guest-bubble-color: #ffffff;
+
+  --openbot-input-bg-color: #ffffff;
+  --openbot-input-color: #303235;
+  --openbot-input-placeholder-color: #9095a0;
+
+  --openbot-header-bg-color: #ffffff;
+  --openbot-header-color: #303235;
+
+  --openbot-border-radius: 6px;
+
+  /* Phone input */
+  --PhoneInputCountryFlag-borderColor: transparent;
+  --PhoneInput-color--focus: transparent;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollable-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollable-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.text-fade-in {
+  transition: opacity 400ms ease-in 200ms;
+}
+
+.bubble-typing {
+  transition:
+    width 400ms ease-out,
+    height 400ms ease-out;
+}
+
+.bubble1,
+.bubble2,
+.bubble3 {
+  background-color: var(--openbot-host-bubble-color);
+  opacity: 0.5;
+}
+
+.bubble1 {
+  animation: chatBubbles 1s ease-in-out infinite;
+}
+
+.bubble2 {
+  animation: chatBubbles 1s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+.bubble3 {
+  animation: chatBubbles 1s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes chatBubbles {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+button,
+input,
+textarea {
+  font-weight: 300;
+}
+
+.slate-a {
+  text-decoration: underline;
+}
+
+.slate-html-container > div {
+  min-height: 24px;
+}
+
+.slate-bold {
+  font-weight: bold;
+}
+
+.slate-italic {
+  font-style: oblique;
+}
+
+.slate-underline {
+  text-decoration: underline;
+}
+
+.text-input::-webkit-input-placeholder {
+  color: var(--openbot-input-placeholder-color) !important;
+  opacity: 1 !important;
+}
+.text-input::-moz-placeholder {
+  color: var(--openbot-input-placeholder-color) !important;
+  opacity: 1 !important;
+}
+.text-input::placeholder {
+  color: var(--openbot-input-placeholder-color) !important;
+  opacity: 1 !important;
+}
+
+.openbot-container {
+  background-image: var(--openbot-container-bg-image);
+  background-color: var(--openbot-container-bg-color);
+  font-family:
+    var(--openbot-container-font-family),
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  padding-top: 16px;
+}
+
+.openbot-button {
+  color: var(--openbot-button-color);
+  background-color: var(--openbot-button-bg-color);
+  border: 1px solid var(--openbot-button-bg-color);
+  border-radius: var(--openbot-border-radius);
+  transition: all 0.3s ease;
+}
+
+.openbot-button.selectable {
+  color: var(--openbot-host-bubble-color);
+  background-color: var(--openbot-host-bubble-bg-color);
+  border: 1px solid var(--openbot-button-bg-color);
+}
+
+.openbot-selectable {
+  border: 1px solid rgba(var(--openbot-button-bg-color-rgb), 0.25);
+  border-radius: var(--openbot-border-radius);
+  color: var(--openbot-container-color);
+  background-color: rgba(var(--openbot-button-bg-color-rgb), 0.08);
+  transition: all 0.3s ease;
+}
+
+.openbot-selectable:hover {
+  background-color: rgba(var(--openbot-button-bg-color-rgb), 0.12);
+  border-color: rgba(var(--openbot-button-bg-color-rgb), 0.3);
+}
+
+.openbot-selectable.selected {
+  background-color: rgba(var(--openbot-button-bg-color-rgb), 0.18);
+  border-color: rgba(var(--openbot-button-bg-color-rgb), 0.35);
+}
+
+.openbot-checkbox {
+  border: 1px solid var(--openbot-button-bg-color);
+  border-radius: var(--openbot-border-radius);
+  background-color: var(--openbot-checkbox-bg-color);
+  color: var(--openbot-button-color);
+  padding: 1px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.openbot-checkbox.checked {
+  background-color: var(--openbot-button-bg-color);
+}
+
+.openbot-host-bubble {
+  color: var(--openbot-host-bubble-color);
+}
+
+.openbot-host-bubble > .bubble-typing {
+  background-color: var(--openbot-host-bubble-bg-color);
+  border: var(--openbot-host-bubble-border);
+  border-radius: 6px;
+}
+
+.openbot-host-bubble img,
+.openbot-host-bubble iframe,
+.openbot-host-bubble video {
+  border-radius: var(--openbot-border-radius);
+}
+
+.openbot-guest-bubble {
+  color: var(--openbot-guest-bubble-color);
+  background-color: var(--openbot-guest-bubble-bg-color);
+  border-radius: 6px;
+}
+
+.openbot-input {
+  color: var(--openbot-input-color);
+  background-color: var(--openbot-input-bg-color);
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: var(--openbot-border-radius);
+}
+
+.openbot-input-error-message {
+  color: var(--openbot-input-color);
+}
+
+.openbot-button > .send-icon {
+  fill: var(--openbot-button-color);
+}
+
+.openbot-chat-view {
+  max-width: 800px;
+}
+
+.ping span {
+  background-color: var(--openbot-button-bg-color);
+}
+
+.rating-icon-container svg {
+  width: 42px;
+  height: 42px;
+  stroke: var(--openbot-button-bg-color);
+  fill: var(--openbot-host-bubble-bg-color);
+  transition: fill 100ms ease-out;
+}
+
+.rating-icon-container.selected svg {
+  fill: var(--openbot-button-bg-color);
+}
+
+.rating-icon-container:hover svg {
+  filter: brightness(0.9);
+}
+
+.rating-icon-container:active svg {
+  filter: brightness(0.75);
+}
+
+.upload-progress-bar {
+  background-color: var(--openbot-button-bg-color);
+  border-radius: var(--openbot-border-radius);
+}
+
+.total-files-indicator {
+  background-color: var(--openbot-button-bg-color);
+  color: var(--openbot-button-color);
+  font-size: 10px;
+}
+
+.openbot-upload-input {
+  transition: border-color 100ms ease-out;
+  border-radius: var(--openbot-border-radius);
+}
+
+.openbot-upload-input.dragging-over {
+  border-color: var(--openbot-button-bg-color);
+}
+
+.secondary-button {
+  background-color: var(--openbot-host-bubble-bg-color);
+  color: var(--openbot-host-bubble-color);
+  border-radius: var(--openbot-border-radius);
+}
+
+.openbot-country-select {
+  color: var(--openbot-input-color);
+  background-color: var(--openbot-input-bg-color);
+  border-radius: var(--openbot-border-radius);
+}
+
+.openbot-date-input {
+  color-scheme: light;
+  color: var(--openbot-input-color);
+  background-color: var(--openbot-input-bg-color);
+  border-radius: var(--openbot-border-radius);
+}
+
+.openbot-popup-blocked-toast {
+  border-radius: var(--openbot-border-radius);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.openbot-picture-button {
+  color: var(--openbot-button-color);
+  background-color: var(--openbot-button-bg-color);
+  border-radius: var(--openbot-border-radius);
+  transition: all 0.3s ease;
+  width: 236px;
+}
+
+.openbot-picture-button > img,
+.openbot-selectable-picture > img {
+  border-radius: var(--openbot-border-radius) var(--openbot-border-radius) 0 0;
+  min-width: 200px;
+  width: 100%;
+  max-height: 200px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.openbot-picture-button.has-svg > img,
+.openbot-selectable-picture.has-svg > img {
+  max-height: 128px;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.openbot-selectable-picture {
+  border: 1px solid rgba(var(--openbot-button-bg-color-rgb), 0.25);
+  border-radius: var(--openbot-border-radius);
+  color: var(--openbot-container-color);
+  background-color: rgba(var(--openbot-button-bg-color-rgb), 0.08);
+  transition: all 0.3s ease;
+  width: 236px;
+}
+
+.openbot-selectable-picture:hover {
+  background-color: rgba(var(--openbot-button-bg-color-rgb), 0.12);
+  border-color: rgba(var(--openbot-button-bg-color-rgb), 0.3);
+}
+
+.openbot-selectable-picture.selected {
+  background-color: rgba(var(--openbot-button-bg-color-rgb), 0.18);
+  border-color: rgba(var(--openbot-button-bg-color-rgb), 0.35);
+}
+
+select option {
+  color: var(--openbot-input-color);
+  background-color: var(--openbot-input-bg-color);
+}

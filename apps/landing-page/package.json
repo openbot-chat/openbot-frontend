@@ -1,0 +1,46 @@
+{
+  "name": "landing-page",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "dotenv -e ./.env -e ../../.env -- next dev -p 3002",
+    "start": "dotenv -e ./.env -e ../../.env -- next start",
+    "build": "dotenv -e ./.env -e ../../.env -- next build",
+    "lint": "next lint",
+    "analyze": "cross-env ANALYZE=true next build"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "2.8.0",
+    "@chakra-ui/icon": "3.1.0",
+    "@emotion/react": "11.11.0",
+    "@emotion/styled": "11.11.0",
+    "@openbot/js2": "workspace:*",
+    "@openbot/lib": "workspace:*",
+    "@openbot/react": "workspace:*",
+    "@vercel/analytics": "0.1.11",
+    "aos": "2.3.4",
+    "focus-visible": "5.2.0",
+    "framer-motion": "10.15.0",
+    "next": "13.4.6",
+    "next-i18next": "^13.2.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.21.8",
+    "@chakra-ui/styled-system": "2.9.1",
+    "@next/bundle-analyzer": "13.2.4",
+    "@types/aos": "3.0.4",
+    "@types/node": "20.2.3",
+    "@types/react": "18.2.15",
+    "autoprefixer": "10.4.14",
+    "cross-env": "7.0.3",
+    "dotenv-cli": "^7.2.1",
+    "eslint": "8.41.0",
+    "eslint-config-custom": "workspace:*",
+    "next-runtime-env": "^1.6.2",
+    "postcss": "^8.4.23",
+    "prettier": "2.8.8",
+    "tsconfig": "workspace:*",
+    "typescript": "5.0.4"
+  }
+}

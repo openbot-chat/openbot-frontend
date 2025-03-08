@@ -1,0 +1,27 @@
+{
+  "name": "@openbot/app-runtime",
+  "version": "1.0.0",
+  "description": "App runtime.",
+  "keywords": [
+  ],
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "files": [
+    "*.js",
+    "*.d.ts*",
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@panva/hkdf": "^1.1.1",
+    "cookie": "0.6.0",
+    "jose": "^5.1.3",
+    "liquidjs": "^10.10.0",
+    "oauth4webapi": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.2.3",
+    "tsconfig": "workspace:*",
+    "typescript": "5.0.4"
+  }
+}

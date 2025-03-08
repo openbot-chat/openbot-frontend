@@ -1,0 +1,18 @@
+{
+  "id": "4f5bf82b-ed6b-4879-8b68-afd3a8894c93",
+  "name": "Openbot助手",
+  "avatar": {
+    "type": "3d",
+    "thumbnail": "https://models.readyplayer.me/64678f4d20c126c2e96a645c.png",
+    "options": {
+      "modelSrc": "https://models.readyplayer.me/64678f4d20c126c2e96a645c.glb"
+    }
+  },
+  "voice": {
+    "provider": "azure",
+    "identifier": "zh-CN-XiaoxiaoNeural",
+    "options": {
+      "enabled": true
+    }
+  }
+}

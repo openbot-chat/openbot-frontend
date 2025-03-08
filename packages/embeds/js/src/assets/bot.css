@@ -1,0 +1,489 @@
+#lite-badge {
+  position: absolute !important;
+  padding: 4px 8px !important;
+  background-color: white !important;
+  z-index: 50 !important;
+  border-radius: 4px !important;
+  color: rgb(17 24 39) !important;
+  gap: 8px !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  font-weight: 600 !important;
+  border-width: 1px !important;
+  /* Make sure the badge is always displayed */
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+  top: auto !important;
+  right: auto !important;
+  left: auto !important;
+  bottom: 20px !important;
+  transition: background-color 0.2s ease-in-out !important;
+}
+
+#lite-badge:hover {
+  background-color: #f7f8ff !important;
+}
+
+/* 聊天框背景头像 */
+.openbot-container .openbot-avatar-container {
+  position: absolute;
+  width: 600px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 聊天框消息列表 */
+.openbot-container .openbot-messages-container {
+  pointer-events: auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* 消息列表背景色 */
+.openbot-container .str-chat {
+  background: transparent;
+}
+.openbot-container .str-chat__virtual-list {
+  background: transparent;
+}
+.openbot-container .str-chat__empty-channel {
+  background: transparent;
+}
+
+/* 聊天气泡里面 markdown 列表的序号 */
+.openbot-container .str-chat__message-markdown ol {
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: var(--str-chat__spacing-4);
+  margin-block-end: var(--str-chat__spacing-4);
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: var(--str-chat__spacing-7);
+}
+.openbot-container .str-chat__message-markdown {
+  line-height: 1.5;
+}
+.openbot-container .str-chat__message-markdown ::marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+  text-indent: 0px !important;
+  text-align: start !important;
+  text-align-last: start !important;
+}
+
+/* 聊天气泡里面 markdown 列表的行距 */
+.openbot-container .str-chat__message-markdown blockquote,
+.openbot-container .str-chat__message-markdown details,
+.openbot-container .str-chat__message-markdown dl,
+.openbot-container .str-chat__message-markdown ol,
+.openbot-container .str-chat__message-markdown p,
+.openbot-container .str-chat__message-markdown pre,
+.openbot-container .str-chat__message-markdown table,
+.openbot-container .str-chat__message-markdown ul {
+  margin-top: 0 !important;
+  margin-bottom: var(--str-chat__spacing-4) !important;
+}
+.openbot-container .str-chat__message-markdown li > p {
+  margin-top: var(--str-chat__spacing-4) !important;
+}
+.openbot-container .str-chat__message-markdown > :first-child {
+  margin-top: 0 !important;
+}
+.openbot-container .str-chat__message-markdown > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* 聊天气泡里面 markdown 的嵌入iframely内容 */
+.openbot-container .str-chat__message-markdown .str-chat__message-iframely {
+  margin: var(--str-chat__spacing-2) 0;
+}
+
+/* TODO iframely 宽度是自适应的，因此依靠 a 标签将宽度撑开，高度隐藏 */
+.openbot-container .str-chat__message-markdown .str-chat__message-iframely-url-link {
+  display: block;
+  overflow-x: hidden;
+  height: 0;
+}
+
+/* TODO 消息气泡操作菜单先屏蔽 */
+.str-chat__ul:not(.str-chat__message-options-in-bubble) .str-chat__li:hover .str-chat__message-options,
+.str-chat__virtual-list:not(.str-chat__message-options-in-bubble) .str-chat__li:hover .str-chat__message-options {
+  display: none;
+}
+
+/* 聊天气泡宽度 */
+.openbot-container .str-chat__message .str-chat__message-bubble {
+  max-width: 1440px;
+}
+@media (max-width: 480px) {
+  .openbot-container .str-chat__message--other .str-chat__message-inner {
+    /* margin-inline-end: calc(var(--str-chat__message-options-button-size) * 3); */
+    margin-inline-end: 0;
+  }
+  .openbot-container .str-chat__message--me .str-chat__message-inner {
+    /* margin-inline-start: calc(var(--str-chat__message-options-button-size) * 3); */
+    margin-inline-start: 0;
+  }
+  /* 在鼠标悬浮时会显示 options，所以要去掉对应宽度 */
+  .openbot-container
+    .str-chat__ul:not(.str-chat__message-options-in-bubble)
+    .str-chat__li:hover
+    .str-chat__message--other
+    .str-chat__message-inner,
+  .openbot-container
+    .str-chat__virtual-list:not(.str-chat__message-options-in-bubble)
+    .str-chat__li:hover
+    .str-chat__message--other
+    .str-chat__message-inner {
+    margin-inline-end: 0;
+  }
+  .openbot-container
+    .str-chat__ul:not(.str-chat__message-options-in-bubble)
+    .str-chat__li:hover
+    .str-chat__message--me
+    .str-chat__message-inner,
+  .openbot-container
+    .str-chat__virtual-list:not(.str-chat__message-options-in-bubble)
+    .str-chat__li:hover
+    .str-chat__message--me
+    .str-chat__message-inner {
+    margin-inline-start: 0;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .openbot-container .str-chat__message--other .str-chat__message-inner {
+    /* margin-inline-end: calc(var(--str-chat__message-options-button-size) * 3 + 5%); */
+    margin-inline-end: 5%;
+  }
+  .openbot-container .str-chat__message--me .str-chat__message-inner {
+    /* margin-inline-start: calc(var(--str-chat__message-options-button-size) * 3 + 5%); */
+    margin-inline-start: 5%;
+  }
+  /* 在鼠标悬浮时会显示 options，所以要去掉对应宽度 */
+  .openbot-container
+    .str-chat__ul:not(.str-chat__message-options-in-bubble)
+    .str-chat__li:hover
+    .str-chat__message--other
+    .str-chat__message-inner,
+  .openbot-container
+    .str-chat__virtual-list:not(.str-chat__message-options-in-bubble)
+    .str-chat__li:hover
+    .str-chat__message--other
+    .str-chat__message-inner {
+    margin-inline-end: 5%;
+  }
+  .openbot-container
+    .str-chat__ul:not(.str-chat__message-options-in-bubble)
+    .str-chat__li:hover
+    .str-chat__message--me
+    .str-chat__message-inner,
+  .openbot-container
+    .str-chat__virtual-list:not(.str-chat__message-options-in-bubble)
+    .str-chat__li:hover
+    .str-chat__message--me
+    .str-chat__message-inner {
+    margin-inline-start: 5%;
+  }
+}
+@media (min-width: 768px) {
+  .openbot-container .str-chat__message--other .str-chat__message-inner {
+    /* margin-inline-end: calc(var(--str-chat__message-options-button-size) * 3 + 10%); */
+    margin-inline-end: 10%;
+  }
+  .openbot-container .str-chat__message--me .str-chat__message-inner {
+    /* margin-inline-start: calc(var(--str-chat__message-options-button-size) * 3 + 10%); */
+    margin-inline-start: 10%;
+  }
+  /* 在鼠标悬浮时会显示 options，所以要去掉对应宽度 */
+  .openbot-container
+    .str-chat__ul:not(.str-chat__message-options-in-bubble)
+    .str-chat__li:hover
+    .str-chat__message--other
+    .str-chat__message-inner,
+  .openbot-container
+    .str-chat__virtual-list:not(.str-chat__message-options-in-bubble)
+    .str-chat__li:hover
+    .str-chat__message--other
+    .str-chat__message-inner {
+    margin-inline-end: 10%;
+  }
+  .openbot-container
+    .str-chat__ul:not(.str-chat__message-options-in-bubble)
+    .str-chat__li:hover
+    .str-chat__message--me
+    .str-chat__message-inner,
+  .openbot-container
+    .str-chat__virtual-list:not(.str-chat__message-options-in-bubble)
+    .str-chat__li:hover
+    .str-chat__message--me
+    .str-chat__message-inner {
+    margin-inline-start: 10%;
+  }
+}
+
+/* 聊天气泡背景色 */
+.openbot-container--with-avatar .str-chat__message--other .str-chat__message-bubble {
+  background-color: rgba(233, 234, 237, 0.8);
+}
+.openbot-container--with-avatar .str-chat__message--me .str-chat__message-bubble {
+  background-color: rgba(224, 240, 255, 0.8);
+}
+
+/* 聊天头像背景色 */
+.openbot-container .str-chat__avatar .str-chat__avatar-fallback,
+.str-chat__avatar .str-chat__avatar-image {
+  background: rgba(224, 240, 255, 0.8);
+}
+
+/* 设置文件dnd容器宽度 */
+.openbot-container .str-chat .rfu-dropzone {
+  width: 100%;
+  /* tailwind 和 streamchat 样式冲突了，这里强制设置一下光标 */
+  cursor: inherit;
+}
+/* 隐藏dnd提示，现在提示是乱的 */
+.openbot-container .str-chat .rfu-dropzone__notifier {
+  display: none;
+}
+
+/* 语音输入图标颜色 */
+.str-chat__message-input .str-chat__file-input-container svg g {
+  fill: var(--str-chat__message-input-tools-color);
+}
+
+/* 录音按钮 */
+.str-chat__message-input .str-chat__message-input-inner .str-chat__message-voice-recorder-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.str-chat__message-input
+  .str-chat__message-input-inner
+  .str-chat__message-voice-recorder-container
+  .str-chat__message-voice-recorder-action {
+  padding: 0 var(--str-chat__spacing-4);
+  height: calc(var(--str-chat__spacing-px) * 45);
+  width: calc(var(--str-chat__spacing-16) * 3);
+  border-radius: var(--str-chat__message-textarea-border-radius);
+  cursor: pointer;
+  /* TODO 为啥总是会出现输入光标 */
+  caret-color: transparent;
+  color: var(--str-chat__message-input-tools-color);
+  border: 1px solid var(--str-chat__message-input-tools-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.str-chat__message-input
+  .str-chat__message-input-inner
+  .str-chat__message-voice-recorder-container
+  .str-chat__message-voice-recorder-action
+  .str-chat__message-voice-recorder-icon {
+  flex-grow: 0;
+}
+.str-chat__message-input
+  .str-chat__message-input-inner
+  .str-chat__message-voice-recorder-container
+  .str-chat__message-voice-recorder-action
+  p {
+  flex-grow: 1;
+  text-align: center;
+}
+.str-chat__message-input
+  .str-chat__message-input-inner
+  .str-chat__message-voice-recorder-container
+  .str-chat__message-voice-recorder-action
+  .str-chat__voice-recorder-microphone
+  svg
+  path {
+  fill: var(--str-chat__message-input-tools-color);
+}
+.str-chat__message-input
+  .str-chat__message-input-inner
+  .str-chat__message-voice-recorder-container
+  .str-chat__message-voice-recorder-action
+  .str-chat__voice-recorder-stop {
+  border: 1px solid var(--str-chat__message-input-tools-color);
+  background: var(--str-chat__message-input-tools-color);
+  width: var(--str-chat__spacing-4);
+  height: var(--str-chat__spacing-4);
+  border-radius: var(--str-chat__spacing-1);
+}
+
+/* 消息内容 markdown 表格 */
+.str-chat__message-markdown table {
+  @apply table-auto w-full text-left border-collapse;
+}
+.str-chat__message-markdown table thead tr {
+  @apply border-b border-slate-400;
+}
+.str-chat__message-markdown table th {
+  @apply top-0 leading-6 p-0 py-2 pr-2;
+}
+.str-chat__message-markdown table tbody {
+  @apply align-baseline;
+}
+.str-chat__message-markdown table tbody tr {
+  @apply border-b border-slate-300;
+}
+.str-chat__message-markdown table tbody tr:last-child {
+  @apply border-slate-400;
+}
+.str-chat__message-markdown table tbody td {
+  @apply py-2 pr-2 leading-6 whitespace-nowrap;
+}
+
+/* 消息内容代码片段 */
+.str-chat__message-markdown pre {
+  padding: 0;
+  position: relative;
+}
+.str-chat__message-markdown pre,
+.str-chat__message-markdown code,
+.str-chat__message-markdown code.hljs * {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+}
+.str-chat__message-markdown pre code {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+.str-chat__message-markdown code {
+  padding: 3px 5px;
+}
+
+.str-chat__message-markdown .highlight pre,
+.str-chat__message-markdown pre {
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  border-radius: 6px;
+}
+
+.str-chat__message-markdown .hljs,
+.str-chat__message-markdown pre {
+  background: #1a1b26;
+  color: #cbd2ea;
+}
+
+/* 拷贝代码按钮 */
+.str-chat__message-markdown pre .copy-code-button {
+  position: absolute;
+  right: 10px;
+  top: 1em;
+  cursor: pointer;
+  padding: 0 5px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  transform: translateX(10px);
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.str-chat__message-markdown pre .copy-code-button:after {
+  content: "copy";
+}
+
+.str-chat__message-markdown pre:hover .copy-code-button {
+  pointer-events: all;
+  transform: translateX(0);
+  opacity: 0.5;
+}
+
+/*!
+  Theme: Tokyo-night-Dark
+  origin: https://github.com/enkia/tokyo-night-vscode-theme
+  Description: Original highlight.js style
+  Author: (c) Henri Vandersleyen <hvandersleyen@gmail.com>
+  License: see project LICENSE
+  Touched: 2022
+*/
+.str-chat__message-markdown .hljs-comment,
+.str-chat__message-markdown .hljs-meta {
+  color: #565f89;
+}
+
+.str-chat__message-markdown .hljs-deletion,
+.str-chat__message-markdown .hljs-doctag,
+.str-chat__message-markdown .hljs-regexp,
+.str-chat__message-markdown .hljs-selector-attr,
+.str-chat__message-markdown .hljs-selector-class,
+.str-chat__message-markdown .hljs-selector-id,
+.str-chat__message-markdown .hljs-selector-pseudo,
+.str-chat__message-markdown .hljs-tag,
+.str-chat__message-markdown .hljs-template-tag,
+.str-chat__message-markdown .hljs-variable.language_ {
+  color: #f7768e;
+}
+
+.str-chat__message-markdown .hljs-link,
+.str-chat__message-markdown .hljs-literal,
+.str-chat__message-markdown .hljs-number,
+.str-chat__message-markdown .hljs-params,
+.str-chat__message-markdown .hljs-template-variable,
+.str-chat__message-markdown .hljs-type,
+.str-chat__message-markdown .hljs-variable {
+  color: #ff9e64;
+}
+
+.str-chat__message-markdown .hljs-attribute,
+.str-chat__message-markdown .hljs-built_in {
+  color: #e0af68;
+}
+
+.str-chat__message-markdown .hljs-keyword,
+.str-chat__message-markdown .hljs-property,
+.str-chat__message-markdown .hljs-subst,
+.str-chat__message-markdown .hljs-title,
+.str-chat__message-markdown .hljs-title.class_,
+.str-chat__message-markdown .hljs-title.class_.inherited__,
+.str-chat__message-markdown .hljs-title.function_ {
+  color: #7dcfff;
+}
+
+.str-chat__message-markdown .hljs-selector-tag {
+  color: #73daca;
+}
+
+.str-chat__message-markdown .hljs-addition,
+.str-chat__message-markdown .hljs-bullet,
+.str-chat__message-markdown .hljs-quote,
+.str-chat__message-markdown .hljs-string,
+.str-chat__message-markdown .hljs-symbol {
+  color: #9ece6a;
+}
+
+.str-chat__message-markdown .hljs-code,
+.str-chat__message-markdown .hljs-formula,
+.str-chat__message-markdown .hljs-section {
+  color: #7aa2f7;
+}
+
+.str-chat__message-markdown .hljs-attr,
+.str-chat__message-markdown .hljs-char.escape_,
+.str-chat__message-markdown .hljs-keyword,
+.str-chat__message-markdown .hljs-name,
+.str-chat__message-markdown .hljs-operator {
+  color: #bb9af7;
+}
+
+.str-chat__message-markdown .hljs-punctuation {
+  color: #c0caf5;
+}
+
+.str-chat__message-markdown .hljs-emphasis {
+  font-style: italic;
+}
+
+.str-chat__message-markdown .hljs-strong {
+  font-weight: 700;
+}

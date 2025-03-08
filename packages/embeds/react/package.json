@@ -1,0 +1,46 @@
+{
+  "name": "@openbot/react",
+  "version": "0.0.10",
+  "description": "React library to display openbots on your website",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "stories:dev": "ladle serve -p 3006",
+    "stories:build": "ladle build",
+    "dev": "rollup --watch --config rollup.config.js",
+    "build": "rollup --config rollup.config.js",
+    "lint": "eslint --fix \"src/**/*.ts*\""
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.22.5",
+    "react": "18.2.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.22.5",
+    "@babel/preset-react": "7.18.6",
+    "@babel/preset-typescript": "7.21.5",
+    "@ladle/react": "2.15.0",
+    "@openbot/js2": "workspace:*",
+    "@rollup/plugin-babel": "6.0.3",
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-node-resolve": "15.0.2",
+    "@rollup/plugin-terser": "0.4.3",
+    "@rollup/plugin-typescript": "11.1.1",
+    "@types/node": "20.2.3",
+    "@types/react": "18.2.15",
+    "eslint": "8.41.0",
+    "eslint-config-custom": "workspace:*",
+    "rollup": "3.20.2",
+    "rollup-plugin-typescript-paths": "1.4.0",
+    "tsconfig": "workspace:*",
+    "tslib": "2.5.2",
+    "tsx": "3.12.7",
+    "typescript": "5.0.4",
+    "vite": "2.9.6"
+  },
+  "peerDependencies": {
+    "@openbot/js2": "workspace:*",
+    "react": "^18.0.0 || ^17.0.0 || ^16.8.0"
+  }
+}

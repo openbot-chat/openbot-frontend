@@ -1,0 +1,676 @@
+{
+  "connection": {
+    "oauth2": {
+      
+    },
+    "deleteButton": {
+      "label": "删除"
+    },
+    "confirmModal": {
+      "title": "是否删除",
+      "message": "删除此连接? <confirmText></confirmText>",
+      "confirm": "删除"
+    },
+    "createModal": {
+      "heading": "创建新Connection",
+      "nameInput": {
+        "label": "名称"
+      },
+      "typeInput": {
+        "label": "类型"
+      },
+      "saveButton": {
+        "label": "保存"
+      }
+    }
+  },
+  "app": {
+    "confirmModal": {
+      "title": "是否删除",
+      "message": "删除此应用? <confirmText></confirmText>",
+      "confirm": "删除"
+    },
+    "list": {
+      "tabs": {
+        "connections": {
+          "label": "Connections"
+        },
+        "actions": {
+          "label": "Actions"
+        },
+        "webhooks": {
+          "label": "Webhooks"
+        }
+      },
+      "header": {
+        "editButton": {
+          "label": "编辑"
+        },
+        "deleteButton": {
+          "label": "删除"
+        },
+        "newConnectionButton": {
+          "label": "新建连接"
+        },
+        "newActionButton": {
+          "label": "新建动作"
+        }
+      },
+      "createButton": {
+        "label": "创建应用"
+      },
+      "saveButton": {
+        "label": "保存"
+      }
+    },
+    "createModal": {
+      "heading": "创建应用",
+      "nameInput": {
+        "label": "名称"
+      },
+      "descriptionInput": {
+        "label": "描述"
+      },
+      "themeInput": {
+        "label": "主题"
+      },
+      "createButton": {
+        "label": "创建"
+      }
+    },
+    "editModal": {
+      "heading": "编辑应用",
+      "nameInput": {
+        "label": "名称"
+      },
+      "descriptionInput": {
+        "label": "描述"
+      },
+      "themeInput": {
+        "label": "主题"
+      },
+      "saveButton": {
+        "label": "保存"
+      }
+    }
+  },
+  "dashboard": {
+    "header": {
+      "settingsButton": {
+        "label": "设置"
+      }
+    }
+  },
+  "channels": {
+    "messenger": "Messenger"
+  },
+  "ChannelAccountList": {
+    "title": "账号列表"
+  },
+  "ChannelAccountPopover": {
+    "title": "集成账号",
+    "connectButton": {
+      "label": "添加账号"
+    },
+    "gobackButton": {
+      "label": "返回"
+    }
+  },
+  "channelProviders": {
+    "wechat": "微信"
+  },
+  "NotFoundPage": {
+    "title": "",
+    "description": "",
+    "backHome": "返回主页"
+  },
+  "save": {
+    "success": "保存成功"
+  },
+  "remove": "删除",
+  "requestEditor": {
+    "keyInput": {
+      "placeholder": "key"
+    },
+    "valueInput": {
+      "placeholder": "value"
+    }
+  },
+  "saveButton": {
+    "label": "保存"
+  },
+  "cancelButton": {
+    "label": "取消"
+  },
+  "welcome": {
+    "createAgentButton": {
+      "label": "创建智能体"
+    }
+  },
+  "login": {
+    "title": "登录",
+    "btn": "登录",
+    "signInButton": {
+      "label": "<provider></provider>登录"
+    }
+  },
+  "help": {
+    "documents": "文档",
+    "feedback": "反馈"
+  },
+  "nav": {
+    "marketplace": "市场",
+    "agents": "智能体",
+    "datastores": "数据集",
+    "chat": "聊天",
+    "tools": "工具",
+    "prompts": "提示词",
+    "credentials": "凭证",
+    "subscriptions": "订阅",
+    "apps": "应用"
+  },
+  "subscriptions": {
+    "tab": {
+      "overview": "我的订阅",
+      "pricing": "定价"
+    }
+  },
+  "marketplace": {
+    "searchButton": {
+      "label": "搜索"
+    }
+  },
+  "prompts": {
+    "promptCard": {
+      "selectButton": {
+        "label": "选择"
+      }
+    },
+    "promptSelect": {
+      "button": {
+        "label": "请选择提示词"
+      }
+    },
+    "title": "提示词",
+    "createButton": {
+      "label": "创建提示词"
+    },
+    "confirmModal": {
+      "message": "确定要删除当前提示词?"
+    },
+    "editPromptModal": {
+      "alert": {
+        "description": "如需传递用户当前输入, 请包含变量 '{input}'\n 如需智能体保持历史记忆，请包含变量 '{chat_history}'."
+      },
+      "name": {
+        "label": "名称:",
+        "helpTxt": "可读名称",
+        "error": "无效名称"
+      },
+      "content": {
+        "label": "提示词内容",
+        "helpTxt": "可以用大括号来定义输入变量, 例如: <tag></tag>",
+        "error_message": "无效内容"
+      },
+      "create": {
+        "title": "新建提示词"
+      },
+      "edit": {
+        "title": "编辑提示词"
+      },
+      "createButton": {
+        "label": "创建"
+      },
+      "updateButton": {
+        "label": "更新"
+      }
+    }
+  },
+  "datastore": {
+    "id": "数据集 ID",
+    "name": "名称",
+    "description": "描述",
+    "visibility": "可见性",
+    "provider": "向量数据库提供商",
+    "enabled": "开启",
+    "datasource_count": "数据源",
+    "agent_count": "智能体",
+    "datasources": "数据源",
+    "search": "搜索",
+    "settings": "设置",
+    "public": "公开",
+    "private": "私有",
+    "delete": "删除",
+    "confirmModal": {
+      "title": "确认删除选中的数据集",
+      "message": "确认删除选中的数据集 <confirmText></confirmText>?"
+    },
+    "createModal": {
+      "heading": "新建数据集",
+      "createButton": {
+        "label": "创建"
+      },
+      "credentialsInput": {
+        "label": "凭证"
+      }
+    }
+  },
+  "datastores": "数据集",
+  "datasource": {
+    "title": "数据源",
+    "name": "名称",
+    "type": "类型",
+    "size": "尺寸",
+    "last_sync": "最后同步时间",
+    "status": "状态",
+    "add": "添加数据源",
+    "select": "选择数据源",
+    "delete": "删除",
+    "confirmModal": {
+      "title": "删除数据源",
+      "message": "您确定要删除该数据源?"
+    }
+  },
+  "document": {
+    "url": "链接",
+    "size": "文件大小",
+    "type": "文档类型",
+    "search": {
+      "placeholder": "输入文本搜索..."
+    },
+    "chunk": {
+      "document_source": "文档来源"
+    }
+  },
+  "profile": {
+    "dropdown": {
+      "logout": "退登",
+      "settings": "设置"
+    }
+  },
+  "agent": {
+    "provider": {
+      "heading": "服务提供者"
+    },
+    "instructions": {
+      "label": "Instructions"
+    },
+    "shortcuts": {
+      "label": "快捷会话"
+    },
+    "advanced_settings": {
+      "title": "高级设置"
+    },
+    "metadata": {
+      "title": "元数据"
+    },
+    "llm": {
+      "title": "语言模型"
+    },
+    "memory": {
+      "title": "记忆设置"
+    },
+    "avatar": {
+      "title": "形象",
+      "2d": "2D",
+      "3d": "3D",
+      "digit_human": "数字人",
+      "createAvatarModal": {
+        "title": "创建形象",
+        "cancel": "取消",
+        "confirm": "确认"
+      }
+    },
+    "voice": {
+      "title": "声音",
+      "selectButton": {
+        "label": "选择声音"
+      },
+      "description": "让智能体用语音说话"
+    },
+    "cognition": {
+      "heading": "多模态",
+      "voice": {
+        "tooltip": "声音识别"
+      },
+      "image": {
+        "tooltip": "图片识别"
+      },
+      "video": {
+        "tooltip": "视频识别"
+      }
+    },
+    "shareButton": {
+      "popover": {
+        "heading": "分享智能体"
+      }
+    },
+    "addToTeam": "添加到团队",
+    "aboutme": "关于我",
+    "tabs": {
+      "customization": "个性化",
+      "knowledge": "知识库",
+      "tools": "工具",
+      "conversations": "会话",
+      "autonomous": "自主任务",
+      "integration": "集成"
+    },
+    "tools": {
+      "heading": {
+        "label": "已添加工具"
+      }
+    },
+    "agentProfileModal": {
+      "title": "关于我",
+      "tools": {
+        "title": "工具"
+      },
+      "userGuide": {
+        "title": "用户指南"
+      }
+    },
+    "agentCard": {
+      "chatButton": {
+        "label": "聊天"
+      },
+      "detailsButton": {
+        "label": "详情"
+      }
+    },
+    "title": "智能体",
+    "visibility": "是否可公开访问",
+    "delete": "删除",
+    "btnCreate": "创建智能体",
+    "edit": {
+      "instructions": "操作提示",
+      "save": "保存"
+    },
+    "btnCreateFromScratch": "从零创建",
+    "profile_settings": "设置",
+    "danger_zone": "危险区域",
+    "confirmModal": {
+      "title": "删除智能体",
+      "confirm": "删除",
+      "message": "确定要删除此智能体吗? 删除后不可恢复. <confirmText></confirmText>"
+    }
+  },
+  "credentials": {
+    "create": "添加凭证",
+    "createTitle": "添加凭证",
+    "createContinue": "继续",
+    "searchInput": {
+      "placeholder": "搜索凭证"
+    },
+    "editCredentialsModal": {
+      "help": "需要帮助吗?  <docLink>打开文档</docLink>",
+      "connectButton": {
+        "label": "连接账号"
+      }
+    },
+    "last_updated_at": "最后更新时间",
+    "item": {
+      "delete": "删除",
+      "edit": "编辑"
+    },
+    "sort": {
+      "lastUpdated": "按最后更新时间排序",
+      "createDesc": "按最后创建时间排序",
+      "nameAsc": "按名称排序(A-Z)",
+      "nameDesc": "按名称排序(Z-A)"
+    },
+    "stats": {
+      "datasources": "数据源",
+      "tools": "工具",
+      "channels": "渠道"
+    }
+  },
+  "organization": {
+    "dropdown": {
+      "newButton": {
+        "label": "新建工作区"
+      }
+    },
+    "title": "工作区",
+    "create": "创建",
+    "name": "名称",
+    "new": "新建工作区",
+    "createModal": {
+      "title": "新建工作区",
+      "name": {
+        "defaultValue": "我的工作区"
+      }
+    },
+    "membersList": {
+      "title": "成员",
+      "inviteInput": {
+        "placeholder": "colleague@company.com"
+      },
+      "inviteButton": {
+        "label": "邀请"
+      },
+      "unlockBanner": {
+        "label": "升级套餐以添加更多成员, 并解锁更多特性 🚀"
+      }
+    },
+    "settings": {
+      "icon": {
+        "title": "图标"
+      },
+      "name": {
+        "label": "名称:"
+      },
+      "deleteButton": {
+        "label": "删除工作区",
+        "confirmMessage": "您确定要删除工作区 {organizationName}? 所有当前工作区的内容都会被永久删除."
+      },
+      "modal": {
+        "menu": {
+          "organization": {
+            "label": "工作区"
+          },
+          "members": {
+            "label": "成员"
+          },
+          "myAccount": {
+            "label": "账户"
+          },
+          "preferences": {
+            "label": "偏好设置"
+          },
+          "version": {
+            "label": "版本: {version}"
+          },
+          "settings": {
+            "label": "设置"
+          },
+          "billingAndUsage": {
+            "label": "账单 & 用量"
+          }
+        }
+      }
+    }
+  },
+  "tools": {
+    "createButton": {
+      "label": "创建工具"
+    },
+    "editOpenApiToolModal": {
+      "createTitle": "创建 OpenAPI 工具",
+      "editTitle": "编辑 OpenAPI 工具"
+    },
+    "select_dialog": {
+      "category_browse_title": "分类"
+    },
+    "title": "工具",
+    "installed": "已安装",
+    "tabs": {
+      "private": "私有"
+    },
+    "createOpenAPIToolButton": {
+      "label": "创建OpenAPI工具"
+    },
+    "createFunctionToolButton": {
+      "label": "创建云函数工具"
+    },
+    "update": {
+      "success": "保存成功"
+    },
+    "create": {
+      "success": "创建成功"
+    }
+  },
+  "confirmModal": {
+    "defaultTitle": "确定?",
+    "cancelBtnTxt": "取消",
+    "confirmButtonLabel": "确认"
+  },
+  "billing": {
+    "upgradeAlert": {
+      "buttonDefaultLabel": "更多信息"
+    },
+    "contribution": {
+      "preLink": "Openbot is contributing 1% of your subscription to remove CO₂ from the atmosphere.",
+      "link": "了解更多."
+    },
+    "pricingCard": {
+      "upgradeButton": {
+        "current": "当前计划",
+        "update": "更新",
+        "upgrade": "升级"
+      },
+      "perMonth": "/ 月",
+      "perYear": "/ 年",
+      "everythingFromPrevPlan": "包含 {plan} 的所有内容",
+      "plusFeatures": ", 以及:",
+      "chatsPerMonth": "次聊天/月",
+      "storageLimit": "GB",
+      "FREE": {
+        "name": "免费版"
+      },
+      "STARTER": {
+        "name": "入门版"
+      },
+      "PRO": {
+        "name": "专业版"
+      },
+      "ENTERPRISE": {
+        "name": "企业版"
+      },
+      "starter": {
+        "heading": "升级到 <plan>基础版</plan>",
+        "description": " 个人 & 小型企业.",
+        "includedSeats": "包含2个坐席",
+        "tokenLimit": "1000000 tokens"
+      },
+      "pro": {
+        "heading": "升级到 <plan>专业版</plan>",
+        "description": "中大型企业",
+        "mostPopularLabel": "最热门",
+        "includedSeats": "包含5个坐席",
+        "everythingFromStarter": "所有基础版特性",
+        "customDomains": "自定义域名",
+        "analytics": "深度分析",
+        "tokenLimit": "10000000 tokens"
+      },
+      "plus": ", 加上:"
+    },
+    "customLimit": {
+      "preLink": "需要自定义套餐吗？",
+      "link": "联系我们!"
+    },
+    "preCheckoutModal": {
+      "companyInput": {
+        "label": "公司名:"
+      },
+      "emailInput": {
+        "label": "Email:"
+      },
+      "taxId": {
+        "label": "Tax ID:",
+        "placeholder": "ID type"
+      },
+      "submitButton": {
+        "label": "结账"
+      }
+    },
+    "currentSubscription": {
+      "heading": "订阅",
+      "subheading": "当前版本:",
+      "endDate": "到期时间:",
+      "pastDueAlert": "续订扣款失败。请前往订阅管理页面进行付款，以避免订阅过期。",
+      "cancelAlert": "订阅将于 {cancelDate} 取消。您可以前往订阅管理页面恢复订阅。"
+    },
+    "billingPortalButton": {
+      "label": "管理订阅"
+    },
+    "updateSuccessToast": {
+      "description": "成功更新为 {plan} 🎉"
+    },
+    "upgradeSuccessToast": {
+      "title": "订阅成功",
+      "description": "订阅 {plan} 成功 🎉"
+    },
+    "upgradeFailToast": {
+      "title": "订阅失败",
+      "description": "抱歉, 订阅 {plan} 失败 💔"
+    },
+    "changePlanForm": {
+      "yearly": "年付",
+      "monthly": "月付",
+      "discount": "送2月"
+    }
+  },
+  "user": {
+    "preferences": {
+      "language": {
+        "heading": "语言",
+        "tooltip": "多国语言翻译还未完工. 🤓"
+      },
+      "appearance": {
+        "heading": "外观",
+        "systemLabel": "系统",
+        "lightLabel": "明亮",
+        "darkLabel": "暗黑"
+      }
+    },
+    "myAccount": {
+      "nameInput": {
+        "label": "名称:"
+      },
+      "emailInput": {
+        "label": "Email:"
+      }
+    }
+  },
+  "apikeys": {
+    "heading": "API keys",
+    "description": "第三方应用可以通过 API key 操作您当前工作区内所有智能体和数据. 小心!",
+    "deleteConfirmationMessage": "令牌 <tokenName></tokenName> 将会被永久撤销, 您确定要继续?",
+    "createModal": {
+      "createHeading": "创建 Apikey",
+      "createdHeading": "Apikey 已创建",
+      "nameInput": {
+        "label": "Enter a unique name for your token to differentiate it from other tokens.",
+        "placeholder": "I.e. Zapier, Github, Make.com"
+      },
+      "copyInstruction": "请复制您的令牌并将其存放在安全的地方。",
+      "securityWarning": "出于安全原因，不会再次显示.",
+      "createButton": {
+        "label": "创建 Apikey"
+      },
+      "doneButton": {
+        "label": "Done"
+      }
+    },
+    "createButton": {
+      "label": "创建"
+    },
+    "deleteButton": {
+      "label": "删除"
+    },
+    "table": {
+      "nameHeader": "名称",
+      "createdHeader": "已创建"
+    }
+  }
+}

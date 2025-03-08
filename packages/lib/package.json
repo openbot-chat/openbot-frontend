@@ -1,0 +1,29 @@
+{
+  "name": "@openbot/lib",
+  "version": "1.0.0",
+  "license": "AGPL-3.0-or-later",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "devDependencies": {
+    "@paralleldrive/cuid2": "2.2.0",
+    "@playwright/test": "1.33.0",
+    "@types/nodemailer": "6.4.7",
+    "aws-sdk": "2.1369.0",
+    "dotenv": "16.0.3",
+    "next": "13.4.6",
+    "nodemailer": "6.9.1",
+    "tsconfig": "workspace:*",
+    "models": "workspace:*",
+    "typescript": "5.0.4",
+    "@openbot/env": "workspace:*"
+  },
+  "peerDependencies": {
+    "aws-sdk": "2.1152.0",
+    "next": "13.0.0",
+    "nodemailer": "6.7.8"
+  },
+  "dependencies": {
+    "got": "12.6.0"
+  }
+}

@@ -1,0 +1,657 @@
+{
+  "connection": {
+    "oauth2": {
+    },
+    "deleteButton": {
+      "label": "Delete"
+    },
+    "createModal": {
+      "heading": "Create New Connection",
+      "nameInput": {
+        "label": "Name"
+      },
+      "typeInput": {
+        "label": "Type"
+      },
+      "saveButton": {
+        "label": "Save"
+      }
+    }
+  },
+  "app": {
+    "confirmModal": {
+      "title": "Deleting?",
+      "message": "Delete App? <confirmText></confirmText>",
+      "confirm": "Delete"
+    },
+    "list": {
+      "tabs": {
+        "connections": {
+          "label": "Connections"
+        },
+        "actions": {
+          "label": "Actions"
+        },
+        "webhooks": {
+          "label": "Webhooks"
+        }
+      },
+      "header": {
+        "editButton": {
+          "label": "Edit"
+        },
+        "deleteButton": {
+          "label": "Delete"
+        },
+        "newConnectionButton": {
+          "label": "New Connection"
+        },
+        "newActionButton": {
+          "label": "New Action"
+        }
+      },
+      "createButton": {
+        "label": "Create App"
+      },
+      "saveButton": {
+        "label": "Save"
+      }
+    },
+    "createModal": {
+      "heading": "Create App",
+      "nameInput": {
+        "label": "Name"
+      },
+      "descriptionInput": {
+        "label": "Description"
+      },
+      "themeInput": {
+        "label": "Theme"
+      },
+      "createButton": {
+        "label": "Create"
+      }
+    },
+    "editModal": {
+      "heading": "Edit App",
+      "nameInput": {
+        "label": "Name"
+      },
+      "descriptionInput": {
+        "label": "Description"
+      },
+      "themeInput": {
+        "label": "Theme"
+      },
+      "saveButton": {
+        "label": "Save"
+      }
+    }
+  },
+  "dashboard": {
+    "header": {
+      "settingsButton": {
+        "label": "Settings"
+      }
+    }
+  },
+  "ChannelAccountList": {
+    "title": "Account List"
+  },
+  "ChannelAccountPopover": {
+    "title": "Add Account",
+    "connectButton": {
+      "label": "Add Account"
+    },
+    "gobackButton": {
+      "label": "Go back"
+    }
+  },
+  "channelProviders": {
+    "wechat": "Wechat"
+  },
+  "NotFoundPage": {
+    "title": "",
+    "description": "",
+    "backHome": "Back to home"
+  },
+  "save": {
+    "success": "Save Success"
+  },
+  "remove": "Remove",
+  "requestEditor": {
+    "keyInput": {
+      "placeholder": "key"
+    },
+    "valueInput": {
+      "placeholder": "value"
+    }
+  },
+  "saveButton": {
+    "label": "Save"
+  },
+  "cancelButton": {
+    "label": "Cancel"
+  },
+  "welcome": {
+    "createAgentButton": {
+      "label": "Create Your Agent"
+    }
+  },
+  "login": {
+    "title": "Login",
+    "btn": "Login",
+    "signInButton": {
+      "label": "Sign in with <provider></provider>"
+    }
+  },
+  "help": {
+    "documents": "Documents",
+    "feedback": "Feedback"
+  },
+  "nav": {
+    "marketplace": "Marketplace",
+    "agents": "Agents",
+    "datastores": "Datastores",
+    "tools": "Tools",
+    "chat": "Chat",
+    "credentials": "Credentials",
+    "subscriptions": "Subscriptions",
+    "apps": "Apps"
+  },
+  "subscriptions": {
+    "title": "Subscriptions",
+    "tab": {
+      "overview": "Overview",
+      "pricing": "Pricing"
+    }
+  },
+  "profile": {
+    "dropdown": {
+      "logout": "Logout",
+      "settings": "Settings"
+    }
+  },
+  "logout": "Logout",
+  "marketplace": {
+    "searchButton": {
+      "label": "Search"
+    }
+  },
+  "agent": {
+    "provider": {
+      "heading": "Provider"
+    },
+    "instructions": {
+      "label": "Instructions"
+    },
+    "shortcuts": {
+      "label": "Conversation shortcuts"
+    },
+    "advanced_settings": {
+      "title": "Advanced Settings"
+    },
+    "metadata": {
+      "title": "Metadata"
+    },
+    "llm": {
+      "title": "Language Model"
+    },
+    "memory": {
+      "title": "记忆设置"
+    },
+    "avatar": {
+      "title": "Avatar",
+      "2d": "2D",
+      "3d": "3D",
+      "digit_human": "D-human",
+      "createAvatarModal": {
+        "title": "Create Avatar",
+        "cancel": "Cancel",
+        "confirm": "Confirm"
+      }
+    },
+    "voice": {
+      "title": "Voice",
+      "selectButton": {
+        "label": "Select Voice"
+      },
+      "description": "Enable Voice to Hear your Agent Speak"
+    },
+    "cognition": {
+      "heading": "Cognition",
+      "voice": {
+        "tooltip": "Voice"
+      },
+      "image": {
+        "tooltip": "Image"
+      },
+      "video": {
+        "tooltip": "Video"
+      }
+    },
+    "shareButton": {
+      "popover": {
+        "heading": "Share Agent"
+      }
+    },
+    "addToTeam": "Add To Team",
+    "aboutme": "About Me",
+    "tabs": {
+      "customization": "Customization",
+      "knowledge": "Knowledge",
+      "tools": "Tools",
+      "conversations": "Conversations",
+      "autonomous": "Autonomous",
+      "integration": "Integration"
+    },
+    "agentProfileModal": {
+      "title": "About Me",
+      "tools": {
+        "title": "Tools"
+      },
+      "userGuide": {
+        "title": "User Guide"
+      }
+    },
+    "tools": {
+      "heading": {
+        "label": "Added"
+      },
+      "editOpenAPIToolModal": {
+        "createTitle": "Create Tool",
+        "editTitle": "Edit Tool"
+      }
+    },
+    "agentCard": {
+      "chatButton": {
+        "label": "Chat"
+      },
+      "detailsButton": {
+        "label": "Details"
+      }
+    },
+    "title": "Agent",
+    "visibility": "Visibility",
+    "integration": "Integration",
+    "delete": "Delete",
+    "btnCreate": "Create Agent",
+    "edit": {
+      "instructions": "Instructions",
+      "save": "Save"
+    },
+    "btnCreateFromScratch": "Create From Scratch",
+    "profile_settings": "Profile Settings",
+    "danger_zone": "Danger Zone",
+    "confirmModal": {
+      "title": "Are you sure to delete this agent?",
+      "confirm": "delete",
+      "message": "Delete this agent? All data of this agent will be deleted. {confirmText}"
+    }
+  },
+  "datastore": {
+    "id": "Datastore ID",
+    "name": "Name",
+    "description": "Description",
+    "visibility": "Visibility",
+    "provider": "Provider",
+    "enabled": "Enabled",
+    "datasource_count": "Datasources",
+    "agent_count": "Agents",
+    "datasources": "Datasources",
+    "search": "Search",
+    "settings": "Settings",
+    "delete": "Delete",
+    "confirmModal": {
+      "title": "Delete Datastore",
+      "message": "Delete Datastore, Please Enter {confirmText} to confirm"
+    },
+    "public": "Public",
+    "private": "Private",
+    "createModal": {
+      "heading": "Create Datastore",
+      "createButton": {
+        "label": "Create"
+      },
+      "credentialsInput": {
+        "label": "Credentials"
+      }
+    }
+  },
+  "prompts": {
+    "title": "Prompts",
+    "promptSelect": {
+      "button": {
+        "label": "请选择提示词"
+      }
+    },
+    "createButton": {
+      "label": "Create Prompt"
+    },
+    "confirmModal": {
+      "message": "确定要删除当前提示词?"
+    },
+    "editPromptModal": {
+      "alert": {
+        "description": "Make sure to include the '{chat_history}' input variable if you want the agent to have a memory of past queries."
+      },
+      "name": {
+        "label": "Name:"
+      },
+      "content": {
+        "label": "Prompt content",
+        "helpTxt": "Input variables can be defined by using handlebars, ex: <tag></tag>",
+        "error_message": "Invalid content"
+      },
+      "create": {
+        "title": "New Prompt"
+      },
+      "edit": {
+        "title": "Edit Prompt"
+      },
+      "createButton": {
+        "label": "Create"
+      },
+      "updateButton": {
+        "label": "Update"
+      }
+    }
+  },
+  "datastores": "Datastores",
+  "datasource": {
+    "title": "Datasource",
+    "name": "Name",
+    "type": "Type",
+    "size": "Size",
+    "last_sync": "Last Sync",
+    "status": "Status",
+    "add": "Add Datasource",
+    "select": "Select Datasource",
+    "delete": "Delete",
+    "confirmModal": {
+      "title": "Delete Datasource",
+      "message": "Are you sure to Delete this datasource?"
+    }
+  },
+  "document": {
+    "url": "URL",
+    "type": "Type",
+    "size": "Size",
+    "search": {
+      "placeholder": "Search..."
+    },
+    "chunk": {
+      "document_source": "Document source"
+    }
+  },
+  "credentials": {
+    "create": "Add Credentials",
+    "createTitle": "Add Credentials",
+    "createContinue": "Continue",
+    "searchInput": {
+      "placeholder": "Search Credentials"
+    },
+    "editCredentialsModal": {
+      "help": "Need Help? <docLink>Open Document</docLink>",
+      "connectButton": {
+        "label": "Connect Account"
+      }
+    },
+    "last_updated_at": "Last Updated at",
+    "sort": {
+      "lastUpdated": "Last Update Time",
+      "createDesc": "Last Create Time",
+      "nameAsc": "By Name(A-Z)",
+      "nameDesc": "By Name(Z-A)"
+    },
+    "stats": {
+      "datasources": "Datasources",
+      "tools": "Tools",
+      "channels": "Channels"
+    }
+  },
+  "organization": {
+    "dropdown": {
+      "newButton": {
+        "label": "Create Organization"
+      }
+    },
+    "title": "Organization",
+    "create": "Create",
+    "name": "Name",
+    "new": "New Organization",
+    "createModal": {
+      "title": "New Organization",
+      "name": {
+        "defaultValue": "New Organization"
+      }
+    },
+    "membersList": {
+      "title": "Members",
+      "inviteInput": {
+        "placeholder": "colleague@company.com"
+      },
+      "inviteButton": {
+        "label": "邀请"
+      },
+      "unlockBanner": {
+        "label": "Upgrade Plan to add more members, and unlock more features 🚀"
+      }
+    },
+    "settings": {
+      "icon": {
+        "title": "Icons"
+      },
+      "name": {
+        "label": "Name:"
+      },
+      "deleteButton": {
+        "label": "Delete Workspace",
+        "confirmMessage": "Are you sure to delete workspace {organizationName}? All data will be deleted forever."
+      },
+      "modal": {
+        "menu": {
+          "organization": {
+            "label": "Workspace"
+          },
+          "members": {
+            "label": "Members"
+          },
+          "myAccount": {
+            "label": "Account"
+          },
+          "preferences": {
+            "label": "Preferences"
+          },
+          "version": {
+            "label": "Version: {version}"
+          },
+          "settings": {
+            "label": "Settings"
+          },
+          "billingAndUsage": {
+            "label": "Billing & Usage"
+          }
+        }
+      }
+    }
+  },
+  "tools": {
+    "createButton": {
+      "label": "Create Tool"
+    },
+    "editOpenApiToolModal": {
+      "createTitle": "Create OpenAPI Tool",
+      "editTitle": "Edit OpenAPI Tool"
+    },
+    "select_dialog": {
+      "category_browse_title": "Categories"
+    },
+    "title": "Tools",
+    "installed": "Installed",
+    "tabs": {
+      "private": "Private"
+    },
+    "createOpenAPIToolButton": {
+      "label": "Create OpenAPI Tool"
+    },
+    "createFunctionToolButton": {
+      "label": "Create Function Tool"
+    },
+    "update": {
+      "success": "Saved"
+    },
+    "create": {
+      "success": "Created"
+    }
+  },
+  "confirmModal": {
+    "defaultTitle": "Are you sure?",
+    "cancelBtnTxt": "Cancel",
+    "confirmButtonLabel": "Confirm"
+  },
+  "billing": {
+    "upgradeAlert": {
+      "buttonDefaultLabel": "More info"
+    },
+    "contribution": {
+      "preLink": "Openbot is contributing 1% of your subscription to remove CO₂ from the atmosphere.",
+      "link": "Learn More."
+    },
+    "pricingCard": {
+      "upgradeButton": {
+        "current": "Your current plan",
+        "update": "Update",
+        "upgrade": "Upgrade"
+      },
+      "perMonth": "/ month",
+      "perYear": "/ year",
+      "everythingFromPrevPlan": "Everything in {plan}",
+      "plusFeatures": ", plus:",
+      "chatsPerMonth": "chats/mo",
+      "storageLimit": "GB",
+      "FREE": {
+        "name": "Free"
+      },
+      "STARTER": {
+        "name": "Starter"
+      },
+      "PRO": {
+        "name": "Professional"
+      },
+      "ENTERPRISE": {
+        "name": "Enterprise"
+      },
+      "starter": {
+        "heading": "Upgrade to <plan>Starter</plan>",
+        "description": " For individuals & small businesses.",
+        "includedSeats": "2 seats included",
+        "tokenLimit": "1000000 tokens"
+      },
+      "pro": {
+        "heading": "Upgrade to ",
+        "description": "For agencies & growing startups",
+        "mostPopularLabel": "Most popular",
+        "everythingFromStarter": "Everything in Starter"
+      }
+    },
+    "customLimit": {
+      "preLink": "Need custom limits? Specific features?",
+      "link": "Let's chat!"
+    },
+    "preCheckoutModal": {
+      "companyInput": {
+        "label": "Company name:"
+      },
+      "emailInput": {
+        "label": "Email:"
+      },
+      "taxId": {
+        "label": "Tax ID:",
+        "placeholder": "ID type"
+      },
+      "submitButton": {
+        "label": "Go to checkout"
+      }
+    },
+    "currentSubscription": {
+      "heading": "Subscription",
+      "subheading": "Current subscription:",
+      "endDate": "Will expire on:",
+      "pastDueAlert": "The latest payment failed. Head over to the billing portal to proceed and avoid having your subscription canceled.",
+      "cancelAlert": "Will be cancelled on {cancelDate}. Head over to the billing portal to proceed and avoid having your subscription canceled."
+    },
+    "billingPortalButton": {
+      "label": "Billing portal"
+    },
+    "updateSuccessToast": {
+      "description": "{plan} plan successfully updated 🎉"
+    },
+    "upgradeSuccessToast": {
+      "title": "Upgrade Success",
+      "description": "Upgraded to {plan} plan 🎉"
+    },
+    "upgradeFailToast": {
+      "title": "Upgrade Failed",
+      "description": "Sorry, upgraded to {plan} plan failed 💔"
+    },
+    "changePlanForm": {
+      "yearly": "Yearly",
+      "monthly": "Monthly",
+      "discount": "16% off"
+    }
+  },
+  "user": {
+    "preferences": {
+      "language": {
+        "heading": "Language",
+        "tooltip": "🤓"
+      },
+      "appearance": {
+        "heading": "Appearance",
+        "systemLabel": "System",
+        "lightLabel": "Light",
+        "darkLabel": "Dark"
+      }
+    },
+    "myAccount": {
+      "nameInput": {
+        "label": "Name:"
+      },
+      "emailInput": {
+        "label": "Email:"
+      }
+    }
+  },
+  "apikeys": {
+    "heading": "API keys",
+    "description": "These tokens allow other apps to control your whole account. Be careful!",
+    "deleteConfirmationMessage": "The token <tokenName></tokenName> will be permanently revoked, are you sure you want to continue?",
+    "createModal": {
+      "createHeading": "Create Apikey",
+      "createdHeading": "Apikey Created",
+      "nameInput": {
+        "label": "Enter a unique name for your token to differentiate it from other tokens.",
+        "placeholder": "I.e. Zapier, Github, Make.com"
+      },
+      "copyInstruction": "Please copy your token and store it in a safe place.",
+      "securityWarning": "For security reasons we cannot show it again.",
+      "createButton": {
+        "label": "Create Apikey"
+      },
+      "doneButton": {
+        "label": "Done"
+      }
+    },
+    "createButton": {
+      "label": "Create"
+    },
+    "deleteButton": {
+      "label": "Delete"
+    },
+    "table": {
+      "nameHeader": "Name",
+      "createdHeader": "Created"
+    }
+  }
+}

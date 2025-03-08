@@ -1,0 +1,33 @@
+{
+  "version": "0.0.1",
+  "name": "openbot",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "docker:up": "docker compose -f docker-compose.dev.yml up -d && sleep 5",
+    "docker:nuke": "docker compose -f docker-compose.dev.yml down --volumes --remove-orphans",
+    "build": "turbo run build",
+    "build:dashboard": "turbo run build --filter=dashboard...",
+    "build:landing-page": "turbo run build --filter=landing-page...",
+    "build:viewer": "turbo run build --filter=viewer...",
+    "lint": "turbo run lint",
+    "dev": "cross-env turbo run dev --parallel --no-cache --filter=dashboard...",
+    "generate-change-log": "pnpx gitmoji-changelog",
+    "prepare": "husky install"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "cross-env": "7.0.3",
+    "husky": "^8.0.3",
+    "turbo": "1.9.9"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "turbo run lint"
+    }
+  },
+  "packageManager": "pnpm@8.1.0"
+}

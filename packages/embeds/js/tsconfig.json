@@ -1,0 +1,16 @@
+{
+  "extends": "tsconfig/react-library.json",
+  "include": ["src/**/*"],
+  "exclude": ["dist", "node_modules"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "tslib": ["node_modules/tslib"]
+    },
+    "lib": ["esnext", "DOM"],
+    "module": "esnext",
+    "target": "ES5",
+    "outDir": "dist",
+    "declarationDir": "dist",
+  }
+}

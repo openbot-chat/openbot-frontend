@@ -1,0 +1,175 @@
+"use client"
+import { trpc } from "@/utils/trpc-client";
+import { Organization } from "models"
+import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useState } from "react"
+import { useSession } from 'next-auth/react';
+import { parseNewName } from "../utils";
+import { useToast } from "@/hooks/useToast";
+import { byId, isNotDefined } from '@openbot/lib'
+import { setOrganizationIdInLocalStorage } from "../utils/setOrganizationIdInLocalStorage";
+
+
+
+const organizationContext = createContext<{
+  organizations: Pick<Organization, 'id' | 'name' | 'icon' | 'plan'>[];
+  organization?: Organization;
+  switchOrganization: (orgId: string) => void
+  createOrganization: (name?: string) => Promise<void>
+  updateOrganization: (updates: { icon?: string; name?: string }) => void
+  deleteCurrentOrganization: () => Promise<void>
+  refreshOrganization: () => void
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+}>({})
+
+type OrganizationContextProps = {
+  children: ReactNode;
+}
+
+
+
+export const OrganizationProvider = ({
+  children,
+}: OrganizationContextProps) => {
+  const { data: session, update: updateSession } = useSession();
+  const trpcContext = trpc.useContext();
+
+  const [organizationId, setOrganizationId] = useState<string | undefined>()
+
+  const { data: organizations } = trpc.org.list.useQuery(
+    undefined,
+    {
+      enabled: !!session?.user,
+    }
+  );
+
+  const { data: organization } = trpc.org.details.useQuery(
+    organizationId,
+    { enabled: !!organizationId }
+  )
+
+  const { showToast } = useToast()
+
+  const createOrganizationMutation = trpc.org.create.useMutation({
+    onError: (error) => showToast({ description: error.message }),
+    onSuccess: async () => {
+      trpcContext.org.list.invalidate()
+    },
+  })
+
+  const updateOrganizationMutation = trpc.org.update.useMutation({
+    onError: (error) => showToast({ description: error.message }),
+    onSuccess: async () => {
+      trpcContext.org.details.invalidate()
+    },
+  })
+
+  const deleteOrganizationMutation = trpc.org.delete.useMutation({
+    onError: (error) => showToast({ description: error.message }),
+    onSuccess: async () => {
+      trpcContext.org.list.invalidate()
+      setOrganizationId(undefined)
+    },
+  })
+
+
+  useEffect(() => {
+    if (
+      !organizations ||
+      organizations.length === 0 ||
+      organizationId
+    )
+      return;
+
+    const lastOrgId = localStorage.getItem('orgId');
+
+    const defaultOrgId = lastOrgId
+      ? organizations.find(byId(lastOrgId))?.id
+      : undefined;
+      //members?.find((member) => member.role === WorkspaceRole.ADMIN)?.org_id    
+
+    const newOrgId = defaultOrgId ?? organizations[0].id
+
+    console.warn('newOrgId: ', newOrgId);
+
+    updateSession({
+      orgId: newOrgId,
+    }).then(() => {
+      console.warn('updateSession ed: ', newOrgId);
+
+      setOrganizationId(newOrgId)
+      setOrganizationIdInLocalStorage(newOrgId)
+    });
+  }, [
+    // session,
+    organizationId,
+    organizations,
+    updateSession,
+  ]);
+
+
+  const switchOrganization = useCallback((orgId: string) => {
+    updateSession({
+      orgId,
+    }).then(() => {
+      console.warn('switch success', orgId)
+      setOrganizationIdInLocalStorage(orgId)
+      setOrganizationId(orgId)
+    });
+  }, [updateSession]);
+
+  const createOrganization = useCallback(async (userFullName?: string) => {
+    if (!organizations) return
+    const name = parseNewName(userFullName, organizations)
+    const organization = await createOrganizationMutation.mutateAsync({ name })
+    // setOrganizationId(organization.id);
+
+    await updateSession({
+      orgId: organization.id,
+    });
+  }, [createOrganizationMutation, organizations, updateSession]);
+
+  const updateOrganization = useCallback((updates: { icon?: string; name?: string }) => {
+    if (!organizationId) return
+
+    updateOrganizationMutation.mutate({
+      organizationId,
+      ...updates,
+    })
+  }, [organizationId, updateOrganizationMutation]);
+
+  const deleteCurrentOrganization = useCallback(async () => {
+    if (!organizationId || !organizations || organizations.length < 2) return
+    await deleteOrganizationMutation.mutateAsync({ organizationId })
+  }, [organizationId, organizations, deleteOrganizationMutation]);
+
+  const refreshOrganization = useCallback(() => {
+    trpcContext.org.details.invalidate()
+  }, [trpcContext]);
+
+  const value = useMemo(() => ({
+    organizations,
+    organization,
+    switchOrganization,
+    createOrganization,
+    updateOrganization,
+    deleteCurrentOrganization,
+    refreshOrganization,
+  }), [
+    organizations,
+    organization,
+    switchOrganization,
+    createOrganization,
+    updateOrganization,
+    deleteCurrentOrganization,
+    refreshOrganization,
+  ]);
+
+  return (
+    <organizationContext.Provider value={value}>
+      {children}
+    </organizationContext.Provider>
+  );
+}
+
+export const useOrganization = () => useContext(organizationContext)

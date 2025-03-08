@@ -1,0 +1,25 @@
+{
+  "name": "db",
+  "license": "AGPL-3.0-or-later",
+  "version": "0.1.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "dev": "cross-env BROWSER=none prisma studio",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push --skip-generate",
+    "migrate:dev": "prisma migrate dev --create-only --schema prisma/schema.prisma",
+    "db:migrate": "prisma migrate deploy"
+  },
+  "dependencies": {
+    "@prisma/client": "4.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.2.3",
+    "dotenv": "16.0.3",
+    "prisma": "4.8.0",
+    "tsconfig": "workspace:*",
+    "tsx": "3.12.7",
+    "typescript": "5.0.4"
+  }
+}

@@ -1,0 +1,1 @@
+window.__ENV = {"NEXT_PUBLIC_VIEWER_URL":"http://localhost:3001","NEXT_PUBLIC_OPENBOT_WEB_API_BASE_URL":"http://localhost:5005/web/v1"};

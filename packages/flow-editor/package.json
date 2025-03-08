@@ -1,0 +1,31 @@
+{
+  "name": "@openbot/flow-editor",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "license": "AGPL-3.0-or-later",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/anatomy": "2.2.0",
+    "@chakra-ui/css-reset": "2.2.0",
+    "@chakra-ui/icons": "2.1.0",
+    "@chakra-ui/next-js": "2.1.5",
+    "@chakra-ui/react": "2.8.0",
+    "@emotion/react": "11.11.0",
+    "@emotion/styled": "11.11.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "zod": "3.20.2"
+  },
+  "devDependencies": {
+    "@chakra-ui/styled-system": "2.9.1",
+    "@types/react": "18.2.15",
+    "cuid": "2.1.8",
+    "db": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "5.0.4"
+  },
+  "peerDependencies": {
+    "next": "13.4.6"
+  }
+}

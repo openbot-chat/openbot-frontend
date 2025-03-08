@@ -1,0 +1,194 @@
+{
+  "login": {
+    "title": "Login",
+    "btn": "Login"
+  },
+  "nav": {
+    "marketplace": "Marketplace",
+    "agents": "Agents",
+    "datastores": "Datastores",
+    "tools": "Tools",
+    "chat": "Chat",
+    "credentials": "Credentials",
+    "subscriptions": "Subscriptions"
+  },
+  "subscriptions": {
+    "title": "Subscriptions",
+    "tab": {
+      "overview": "Overview",
+      "pricing": "Pricing"
+    }
+  },
+  "profile": {
+    "dropdown": {
+      "logout": "Logout",
+      "settings": "Settings"
+    }
+  },
+  "agent": {
+    "delete": "Delete",
+    "btnCreate": "Create Agent",
+    "edit": {
+      "instructions": "Instructions",
+      "save": "Save"
+    },
+    "btnCreateFromScratch": "Create From Scratch",
+    "profile_settings": "Profile Settings",
+    "danger_zone": "Danger Zone",
+    "confirmModal": {
+      "title": "Are you sure to delete this agent?",
+      "confirm": "delete",
+      "message": "Delete this agent? All data of this agent will be deleted. {confirmText}"
+    }
+  },
+  "datastore": {
+    "id": "Datastore ID",
+    "name": "Name",
+    "description": "Description",
+    "visibility": "Visibility",
+    "provider": "Provider",
+    "enabled": "Enabled",
+    "datasource_count": "Datasources",
+    "agent_count": "Agents",
+    "datasources": "Datasources",
+    "search": "Search",
+    "settings": "Settings",
+    "delete": "Delete",
+    "confirmModal": {
+      "title": "Delete Datastore",
+      "message": "Delete Datastore, Please Enter {confirmText} to confirm"
+    },
+    "public": "Public",
+    "private": "Private"
+  },
+  "datastores": "Datastores",
+  "datasource": {
+    "title": "Datasource",
+    "name": "Name",
+    "type": "Type",
+    "size": "Size",
+    "last_sync": "Last Sync",
+    "status": "Status",
+    "add": "Add Datasource",
+    "select": "Select Datasource",
+    "delete": "Delete",
+    "confirmModal": {
+      "title": "Delete Datasource",
+      "message": "Are you sure to Delete this datasource?"
+    }
+  },
+  "document": {
+    "url": "URL",
+    "type": "Type",
+    "size": "Size",
+    "search": {
+      "placeholder": "Search..."
+    },
+    "chunk": {
+      "document_source": "Document source"
+    }
+  },
+  "avatar": {
+    "2d": "2D",
+    "3d": "3D",
+    "digit_human": "D-human"
+  },
+  "credentials": {
+    "create": "Add Credentials",
+    "createTitle": "Add Credentials",
+    "createContinue": "Continue"
+  },
+  "organization": {
+    "title": "Organization",
+    "create": "Create",
+    "name": "Name",
+    "new": "New Organization",
+    "membersList": {
+      "title": "Members",
+      "inviteInput": {
+        "placeholder": "colleague@company.com"
+      },
+      "inviteButton": {
+        "label": "邀请"
+      },
+      "unlockBanner": {
+        "label": "Upgrade Plan to add more members, and unlock more features 🚀"
+      }
+    },
+    "settings": {
+      "icon": {
+        "title": "Icons"
+      },
+      "name": {
+        "label": "Name:"
+      },
+      "deleteButton": {
+        "label": "Delete Workspace",
+        "confirmMessage": "Are you sure to delete workspace {organizationName}? All data will be deleted forever."
+      },
+      "modal": {
+        "menu": {
+          "organization": {
+            "label": "Workspace"
+          },
+          "members": {
+            "label": "Members"
+          },
+          "myAccount": {
+            "label": "Account"
+          },
+          "preferences": {
+            "label": "Preferences"
+          },
+          "version": {
+            "label": "Version: {version}"
+          },
+          "settings": {
+            "label": "Settings"
+          },
+          "billingAndUsage": {
+            "label": "Billing & Usage"
+          }
+        }
+      }
+    }
+  },
+  "tools": {
+    "select_dialog": {
+      "category_browse_title": "Categories"
+    },
+    "title": "Tools",
+    "installed": "Installed",
+    "private": "Private"
+  },
+  "confirmModal": {
+    "defaultTitle": "Are you sure?",
+    "cancelBtnTxt": "Cancel",
+    "confirmButtonLabel": "Confirm"
+  },
+  "user": {
+    "preferences": {
+      "language": {
+        "heading": "Language",
+        "tooltip": "🤓"
+      },
+      "appearance": {
+        "heading": "Appearance",
+        "systemLabel": "System",
+        "lightLabel": "Light",
+        "darkLabel": "Dark"
+      }
+    },
+    "myAccount": {
+      "nameInput": {
+        "label": "Name:"
+      },
+      "emailInput": {
+        "label": "Email:"
+      }
+    }
+  },
+  "apikeys": {
+    "deleteConfirmationMessage": "The token <tokenName></tokenName> will be permanently revoked, are you sure you want to continue?"
+  }
+}
