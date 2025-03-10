@@ -31,15 +31,4 @@ The development server will start at `http://localhost:3000`
 Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-```bash
-# pnpm install --prod
-pnpm i
-```
-
-```bash
-pnpm dev
-```
-
-
+This project is licensed under the MIT License - see the [LICENSE](apps/landing-page/LICENSE) file for details.
